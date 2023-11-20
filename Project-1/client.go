@@ -10,7 +10,7 @@ type Args struct {
 }
 
 func main() {
-	client, err := jsonrpc.Dial("tcp", "localhost:1234")
+	client, err := jsonrpc.Dial("tcp", "localhost:8080")
 	if err != nil {
 		fmt.Println("Error connecting to server:", err)
 		return

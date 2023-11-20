@@ -22,14 +22,14 @@ func main() {
 	mathService := new(MathService)
 	rpc.Register(mathService)
 
-	listener, err := net.Listen("tcp", ":1234")
+	listener, err := net.Listen("tcp", ":8080")
 	if err != nil {
 		fmt.Println("Error starting listener:", err)
 		return
 	}
 	defer listener.Close()
 
-	fmt.Println("Listening on :1234...")
+	fmt.Println("Listening on :8080...")
 
 	for {
 		conn, err := listener.Accept()
